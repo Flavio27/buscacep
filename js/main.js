@@ -213,7 +213,7 @@ let putAdress  = async function (adressId) {
     </div>
   </div>
         `
-        // Call the modal with JQUERY.
+        // Call the modal with JQUERY
         $('#editModal').modal('show')
 
       let cep = document.querySelector('#txtCep')
