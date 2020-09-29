@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css">
+
+<body>
+    <div class="container" id="search">
+        <h3>Encontrar endereço e coordenadas por CEP:</h3>
+        <span class="form-group col-md-2" role="alert" id="cepAlertFail"></span>
+        <form action="javascript:getCEP(textCep.value)">
+            
+            <div class="form-group col-md-6">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        
+                        <input type="text" id="textCep" class="mdc-text-field__input form-control"
+                            oninput="this.value = this.value.replace(/[^0-9.]/g, '');" maxLength="9" size="9"
+                            placeholder="digite seu cep" required />          
+                    </div>
+                    <div class="form-group col-md-2">
+                        <input type="submit" value="Pesquisar" class="btn btn-dark" />
+                    </div>
+                    <div class="form-group col-md-0">
+
+                    </div>
+                    <div class="form-group col-md-3" id="limpar">     
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </form>
+        <section id="sectionCEP">
+            <button id="showCEP" onclick="showCEPs()" class="btn btn-dark">Mostrar CEPs cadastrados</button>
+        </section>
+        <div class="col-md-12" id="addressResult">
+            <div class="mdc-card__primary-action" id="map">
+            </div><br>
+            <div id="addressDetail">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/main.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrM2JAFNh8SiW7pIEnvBcoj6JIEyFWpxo" async defer></script>
+<script src="./js/jquery-3.5.1.min.js"></script>
+<script src="./js/popper.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+
+</html>

@@ -1,0 +1,46 @@
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    margin: 0;
+    padding-top: 0.1px;
+    display: block;
+  }
+  
+
+  div {
+      height: 90%;
+  }
+
+  #map {
+    height: 60%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #addressDetail {
+    height: 63%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #editModal{
+    height: 700px;
+  }
+
+  #confirm{
+    margin-top: 150px;
+    height: 260px;
+  }
+
+  #cepAlertFail{
+    color: rgb(245, 98, 98);
+    font-size: small;
+  }
+
+  #saveAlert{
+    width: 200px;
+  }
